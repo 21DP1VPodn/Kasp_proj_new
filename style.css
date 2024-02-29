@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #801504;
+}
+.container{
+  vertical-align:middle
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.center {
+  text-align: center;
+  color: #cbb26a
+}
+
+.image-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 200px 0 5px 0;
+}
+
+button{
+  right: 0px;
+  width: 300px;
+  background-color: #cbb26a;
+  color: black;
+  padding: 15px 22px;
+  border-radius: 12px;
+  border: none;
+}
+
+.div-center {
+  text-align: center;
+}
+
+.link {
+  color: #000000
+}
