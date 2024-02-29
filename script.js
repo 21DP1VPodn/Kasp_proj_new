@@ -167,87 +167,31 @@ const d100 = ["10_1.png",
 "100_99.png",
 "100_100.png"];
 
-function roll4() {
-  let die = document.getElementById("d4");
-  die.classList.add("shake");
+const dices = [ d4,
+d6,
+d8,
+d10,
+d12,
+d20,
+d100];
 
-  setTimeout(function() {
-    die.classList.remove("shake");
-    let value = Math.floor(Math.random()*4);
-    document.getElementById("d4").setAttribute("src", d4[value]);
-  },
-  1000  
-  );
-}
+const ids = ["d4",
+"d6",
+"d8",
+"d10",
+"d12",
+"d20",
+"d100"];
 
-function roll6() {
-  let die = document.getElementById("d6");
-  die.classList.add("shake");
-
-  setTimeout(function() {
-    die.classList.remove("shake");
-    let value = Math.floor(Math.random()*6);
-    document.getElementById("d6").setAttribute("src", d6[value]);
-  },
-  1000  
-  );
-}
-function roll8() {
-  let die = document.getElementById("d8");
-  die.classList.add("shake");
-  
-  setTimeout(function() {
-    die.classList.remove("shake");
-    let value = Math.floor(Math.random()*8);
-    document.getElementById("d8").setAttribute("src", d8[value]);
-  },
-  1000  
-  );
-}
-  function roll10() {
-  let die = document.getElementById("d10");
-  die.classList.add("shake");
-
-  setTimeout(function() {
-    die.classList.remove("shake");
-    let value = Math.floor(Math.random()*10);
-    document.getElementById("d10").setAttribute("src", d10[value]);
-  },
-  1000  
-  );
-}
-  function roll12() {
-  let die = document.getElementById("d12");
-  die.classList.add("shake");
-
-  setTimeout(function() {
-    die.classList.remove("shake");
-    let value = Math.floor(Math.random()*12);
-    document.getElementById("d12").setAttribute("src", d12[value]);
-  },
-  1000  
-  );
-}
-  function roll20() {
-  let die = document.getElementById("d20");
-  die.classList.add("shake");
-
-  setTimeout(function() {
-    die.classList.remove("shake");
-    let value = Math.floor(Math.random()*20);
-    document.getElementById("d20").setAttribute("src", d20[value]);
-  },
-  1000  
-  );
-}
-  function roll100() {
-  let die = document.getElementById("d100");
+function roll(x)
+{
+  let die = document.getElementById(ids[x]);
   die.classList.add("shake");
 
   setTimeout(function() {
     die.classList.remove("shake");
     let value = Math.floor(Math.random()*100);
-    document.getElementById("d100").setAttribute("src", d100[value]);
+    document.getElementById(ids[x]).setAttribute("src", dices[x][value]);
   },
   1000  
   );
