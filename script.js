@@ -183,14 +183,14 @@ const ids = ["d4",
 "d20",
 "d100"];
 
-function roll(x)
+function roll(x, maximal)
 {
   let die = document.getElementById(ids[x]);
   die.classList.add("shake");
 
   setTimeout(function() {
     die.classList.remove("shake");
-    let value = Math.floor(Math.random()*100);
+    let value = Math.floor(Math.random()*maximal);
     document.getElementById(ids[x]).setAttribute("src", dices[x][value]);
   },
   1000  
