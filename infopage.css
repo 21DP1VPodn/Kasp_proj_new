@@ -167,15 +167,6 @@ body {
     padding-left: 20px;
     display: flex;
     float: right;
-    width: 300px;
-    height: 150px;
-    left: 75%;
-    top: 7%;
-}
-
-.subimage_mage {
-    display: flex;
-    float: right;
     width: 400px;
     height: 350px;
     left: 75%;
@@ -183,6 +174,7 @@ body {
 }
 
 .subimage_race {
+    padding-top: 100px;
     display: flex;
     float: right;
     width: 400px;

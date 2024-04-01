@@ -6,14 +6,88 @@
 </head>
 <body>
     <header class = "header"> 
-        <a href = "choicepage.html"> 
+        <a> 
         <img src = "logo.png" class = "img-header">
         </a>
         <nav class = "navigation">
-            <p class = "registertext">register</p>
-            <p class = "logintext">login</p>
+          <a href = "choicepage.html", class = "text_header">Home</a>
+          <a href = "#", class = "text_header">Contacts</a>
+          <button class = "btnLogin-popup">login</button>
         </nav>
-    </header>
+      </header>
+      <div class="wrapper">
+        <span class = "icon-close">
+          <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box login">
+          <h2>Login</h2>
+          <form action="#">
+            <div class="input-box">
+              <span class="icon">
+                <ion-icon name="person"></ion-icon>
+              </span>
+              <input type="text" required>
+              <label>Username</label>
+            </div>
+            <div class="input-box">
+              <span class="icon">
+                <ion-icon name="lock-closed"></ion-icon>
+              </span>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox">remember me</label>
+              <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+              <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+            </div>
+          </form>
+        </div>
+        <div class="form-box register">
+          <h2>Registration</h2>
+          <form action="#">
+            <div class="input-box">
+              <span class="icon">
+                <ion-icon name="people"></ion-icon>
+              </span>
+              <input type="text" required>
+              <label>Name</label>
+            </div>
+            <div class="input-box">
+              <span class="icon">
+                <ion-icon name="mail"></ion-icon>
+              </span>
+              <input type="email" required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon">
+                <ion-icon name="person"></ion-icon>
+              </span>
+              <input type="text" required>
+              <label>Username</label>
+            </div>
+            <div class="input-box">
+              <span class="icon">
+                <ion-icon name="lock-closed"></ion-icon>
+              </span>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox">I want to recieve news about the site</label>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="login-register">
+              <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+      </div>
     <h1 class = "Header-text">DESERTER</h1>
     <p><b>Skill proficiencies:</b> athletics, medicine</p>
     <p><b>Tool proficiencies:</b> cartographer tools</p>
@@ -216,4 +290,8 @@
         <img src = "mail.png" class = "mailimage">
         <p class = "mailtext">VladlensPodnebess@gmail.lv</p>
     </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src = "login-register.js"></script>
 </body>
