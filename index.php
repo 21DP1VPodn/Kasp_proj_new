@@ -14,7 +14,7 @@
 </body>
 
 <div class="div-center">
-    <a href = "choicepage.html" class = "link">
+    <a href = "choicepage.php" class = "link">
       <button id = "btn"> enter the dungeon </button>
     </a>
 </div>

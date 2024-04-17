@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<?php 
+session_start();
+
+include("connection.php");
+include("functions.php");
+?>
+
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -23,19 +32,19 @@
     </span>
     <div class="form-box login">
       <h2>Login</h2>
-      <form action="#">
+      <form method = "post" action = "login.php">
         <div class="input-box">
           <span class="icon">
             <ion-icon name="person"></ion-icon>
           </span>
-          <input type="text" required>
+          <input type="text" name = 'User_name_login' required>
           <label>Username</label>
         </div>
         <div class="input-box">
           <span class="icon">
             <ion-icon name="lock-closed"></ion-icon>
           </span>
-          <input type="password" required>
+          <input type="password" name='Password_login' required>
           <label>Password</label>
         </div>
         <div class="remember-forgot">
@@ -50,33 +59,33 @@
     </div>
     <div class="form-box register">
       <h2>Registration</h2>
-      <form action="#">
+      <form method="post" action = "signup.php">
         <div class="input-box">
           <span class="icon">
             <ion-icon name="people"></ion-icon>
           </span>
-          <input type="text" required>
+          <input type="text" name = "Name" required>
           <label>Name</label>
         </div>
         <div class="input-box">
           <span class="icon">
             <ion-icon name="mail"></ion-icon>
           </span>
-          <input type="email" required>
+          <input type="email" name = "Mail" required>
           <label>Email</label>
         </div>
         <div class="input-box">
           <span class="icon">
             <ion-icon name="person"></ion-icon>
           </span>
-          <input type="text" required>
+          <input type="text" name = "User_name" required>
           <label>Username</label>
         </div>
         <div class="input-box">
           <span class="icon">
             <ion-icon name="lock-closed"></ion-icon>
           </span>
-          <input type="password" required>
+          <input type="password" name = "Password" required>
           <label>Password</label>
         </div>
         <div class="remember-forgot">
@@ -88,7 +97,6 @@
         </div>
       </form>
     </div>
-  </div>
   </div>
   <a id="container1", style="pointer-events: auto;", href = "subs.html">
   <div class = "container", id = "container",style = "pointer-events: auto;">
@@ -147,3 +155,4 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+</html>
