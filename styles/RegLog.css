@@ -1,0 +1,88 @@
+body {
+    background-image: url("LogReg.jpg");
+    background-size: 100% 100%;
+    margin: 0;
+}
+
+.header {
+    padding: 5px;
+    background: #801504;
+    color: goldenrod;
+    font-size: 18px;
+    width: 99.5%;
+ }
+  
+.img-header {
+    position: left;
+    height: 5%;
+    width: 5%;
+}
+
+.registertext {
+    font-size: 18px;
+    color: goldenrod;
+    position: absolute;
+    display: flex;
+    top: 0%;
+    left: 90%;
+}
+  
+.logintext {
+    font-size: 18px;
+    color: goldenrod;
+    position: absolute;
+    display: flex;
+    top: 0%;
+    left: 95%;
+}
+
+.footer {
+    padding: 5px;
+    background: #801504;
+    color: goldenrod;
+    position: absolute;
+    display: flex;
+    font-size: 18px;
+    top: 94%;
+    width: 99.5%;
+}
+
+.mailimage {
+    height: 2%;
+    width: 2%;
+    display: inline;
+    padding-top: 15px;
+    padding-right: 5px;
+}
+  
+.mailtext {
+    display: inline;
+}
+
+.inputer {
+    position: absolute;
+    display: flex;
+    top: 30%;
+    left: 40%;
+    width: 400px;
+    height: 25px;
+}
+
+.inputer_low {
+    position: absolute;
+    display: flex;
+    top: 40%;
+    left: 40%;
+    width: 400px;
+    height: 25px;
+}
+
+
+.img {
+    position: absolute;
+    display: flex;
+    top: 55%;
+    left: 49%;
+    height: 100px;
+    width: 100px;
+}
