@@ -8,7 +8,9 @@ html, body {
   height: 100%;
   width: 100%;
   background-color: #801504;
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 .header {
@@ -116,7 +118,7 @@ html, body {
   width: 100%;
   height: 500px;
   color: black;
-  background-image: url("feats.jpg");
+  background-image: url("http://localhost/login/Kasp_proj_new/images/feats.jpg");
   background-size: 100% 100%;
   
 }
@@ -133,7 +135,7 @@ html, body {
   width: 100%;
   height: 500px;
   color: white;
-  background-image: url("background.jpg");
+  background-image: url("http://localhost/login/Kasp_proj_new/images/background.jpg");
   background-size: 100% 100%;
 }
 
@@ -157,7 +159,7 @@ html, body {
   width: 100%;
   height: 500px;
   color: white;
-  background-image: url("dice.jpg");
+  background-image: url("http://localhost/login/Kasp_proj_new/images/dice.jpg");
   background-size: 100% 100%;
   border: 0;
   
@@ -208,6 +210,12 @@ html, body {
 .container{
   height: 500px;
   width: 100%;
+}
+
+.container-first{
+  height: 500px;
+  width: 100%;
+  padding-top: 5%;
 }
 
 .registertext {
@@ -449,4 +457,162 @@ html, body {
 
 .show {
   display:block;
+}
+
+.first{
+  position: absolute;
+}
+
+.menu-div
+{
+  display: none;
+}
+
+.menu-content
+{
+  display: none;
+  list-style: none;
+}
+
+.menu-div .btnLogin-popup
+{
+  background: none;
+  border: none;
+  color: goldenrod;
+}
+
+.menu-div .btnProfile
+{
+  background: none;
+  border: none;
+  color: goldenrod;
+}
+
+
+.menu-line
+{
+  margin: auto;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: goldenrod;
+}
+
+.menu-content.active
+{
+  transition: 2s;
+  display: block;
+}
+
+.menu
+{
+  background-color: #801504;
+  color: goldenrod;
+  border-color: goldenrod;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 18px;
+  width: 35px;
+  height: 35px;
+}
+
+@media only screen and (max-width: 426px)
+{
+  .button-classes
+  {
+    height: 200px;
+  }
+
+  .button-races
+  {
+    height: 200px;
+  }
+
+  .button-feats
+  {
+    height: 200px;
+    color: white;
+  }
+  .button-backgrounds
+  {
+    height: 200px;
+  }
+
+  .button-dice
+  {
+    height: 200px;
+  }
+
+  .button-books
+  {
+    height: 200px;
+  }
+
+  .header
+  {
+    position: absolute;
+  }
+
+  .container{
+    height: 200px;
+    padding-top: 15%;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  .mailimage
+  {
+    margin-top: 20%;
+  }
+
+  .mailtext
+  {
+    padding-top: 20%;
+  }
+
+  .wrapper
+  {
+    left: 0%;
+    width: 320px;
+  }
+
+  .menu-div
+  {
+    display: block;
+    text-align: right;
+  }
+
+  .navigation a 
+  {
+    display: none;
+  };
+
+  .navigation .btnLogin-popup
+  {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 765px)
+{
+ .wrapper
+ {
+    left: 45%;
+ }
+}
+
+@media only screen and (min-width: 1024px)
+{
+ .wrapper
+ {
+    left: 60%;
+ }
+}
+
+@media only screen and (min-width: 1070px)
+{
+  .wrapper
+  {
+    left: 70%;
+  }
 }

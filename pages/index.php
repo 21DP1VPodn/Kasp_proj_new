@@ -8,14 +8,15 @@
   <link href="http://localhost/login/Kasp_proj_new/styles/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class = "container">
+<body>
+  <div class = 'container'>
   <img src="http://localhost/login/Kasp_proj_new/images/logo.png" id="image" class = "image-center">
-</body>
-
-<div class="div-center">
+  </div>
+  <div class="div-center">
     <a href = "choicepage.php" class = "link">
       <button id = "btn"> enter the dungeon </button>
     </a>
 </div>
+</body>
 
 </html>

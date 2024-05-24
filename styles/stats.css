@@ -1,18 +1,15 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-}
-
-body {
-    background-image: url("http://localhost/login/Kasp_proj_new/images/bg.jpg");
+body
+{
+    width: 100%;
+    height: 105vh;
+    background: no-repeat;
+    background-size: 100vh;
+    background-image: url('http://localhost/login/Kasp_proj_new/images/bg2.png');
+    margin: 0px;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .header {
@@ -26,6 +23,7 @@ body {
     width: 100%;
     align-items: center;
     z-index: 99;
+    padding-left: 0;
  }
   
 .text_header {
@@ -61,7 +59,7 @@ body {
     color: #801504;
 }
 
-.navigation a::after {
+.navigation .text_header::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -75,7 +73,7 @@ body {
     transition: transform .5s;
 }
 
-.navigation a:hover::after {
+.navigation .text_header:hover::after {
     transform-origin: left;;
     transform: scaleX(1);
 }
@@ -104,7 +102,7 @@ body {
     top: 0%;
     left: 95%;
 }
-  
+
 .footer_down {
     background: #801504;
     color: goldenrod;
@@ -123,7 +121,11 @@ body {
     font-size: 18px;
     background-clip: content-box;
     width: 100%;
+    position: absolute;
     display: inline;
+    top: 93.6%;
+    margin-top: 4vh;
+    height: 10vh;
 }
   
 .mailimage {
@@ -138,66 +140,133 @@ body {
     display: inline;
 }
 
-.Header-text {
-    color: #d94730;
-    padding-top: 100px;
-    padding-bottom: 10px;
-}
+.navigation .btnProfile {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid goldenrod;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: goldenrod;
+    font-weight: 500;
+    transition: .5s;
+  }
 
-.Ability-text {
-    color: #d94730;
-    margin-block-end: 0px;
-    padding-top: 10px;
-}
+  .navigation .btnProfile:hover {
+    background: goldenrod;
+    color: #801504;
+  }
 
-.ability-level {
-    padding-top: 0px;
-}
+  .btn-1
+  {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    top: 45%;
+    left: 25%;
+    background-color: grey;
+    color: whitesmoke;
+    transition: .5s;
+  }
 
-.text {
-    padding-top: 10px;
-}
+  .btn-2
+  {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    top: 45%;
+    left: 45%;
+    background-color: grey;
+    color: whitesmoke;
+    transition: .5s;
+  }
 
-.text-lower {
-    padding-top: 10px;
-    padding-bottom: 60px;
-}
+  .btn-3
+  {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    top: 45%;
+    left: 65%;
+    background-color: grey;
+    color: whitesmoke;
+    transition: .5s;
+  }
 
-.subimage {
-    padding-top: 50px;
-    padding-left: 20px;
-    display: flex;
-    float: right;
-    width: 400px;
-    height: 350px;
-    left: 75%;
-    top: 7%;
-}
+  .btn-1:hover
+  {
+    background-color: rgb(102, 102, 102);
+  }
 
-.subimage_race {
-    padding-top: 100px;
-    display: flex;
-    float: right;
-    width: 400px;
-    height: 550px;
-    left: 75%;
-}
+  .btn-2:hover
+  {
+    background-color: rgb(102, 102, 102);
+  }
 
-table, th, td {
-    border: 1px solid
-}
+  .btn-3:hover
+  {
+    background-color: rgb(102, 102, 102);
+  }
 
-table {
-    width: auto;
-    background-color: white;
-}
+  .warning
+  {
+    position: absolute;
+    color: goldenrod;
+    top: 40%;
+    left: 30%;
+    font-size: 68px;
+  }
 
-.wrapper {
-    position: fixed;
+  .admin-table
+  {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    background-color: whitesmoke;
+  }
+
+  .admin-table-records
+  {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    background-color: whitesmoke;
+  }
+
+  th, td
+  {
+    border: black solid;
+    min-width: 15%;
+  }
+
+  .subclass
+  {
+    background-color: rgb(151, 151, 255);
+  }
+
+  .race
+  {
+    background-color: rgb(145, 255, 145);
+  }
+
+  .feat
+  {
+    background-color: rgb(255, 145, 145);
+  }
+
+  .backstory
+  {
+    background-color: rgb(255, 255, 109);
+  }
+
+  .wrapper {
+    position: absolute;
     width: 400px;
     height: 440px;
     top: 16%;
-    left: 70%;
+    left:70%;
     margin-bottom: 50px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
@@ -208,44 +277,45 @@ table {
     overflow: hidden;
     transform: scale(0);
     transition: transform .5s ease ,height .2s ease;
-}
-
-.wrapper.active {
+  }
+  
+  .wrapper.active {
     height: 570px;
-}
-
-.wrapper .form-box {
+  }
+  
+  .wrapper .form-box {
     width: 100%;
-    padding: 40px;
-}
-
-.wrapper .form-box.login {
+    padding: 20px;
+    padding-left: 0px;
+  }
+  
+  .wrapper .form-box.login {
    transition: transform .18s ease;
    transform: translateX(0);
-}
-
-.wrapper.active .form-box.login {
+  }
+  
+  .wrapper.active .form-box.login {
     transition: none;
     transform: translateX(-400px);
- }
-
-.wrapper .form-box.register {
+  }
+  
+  .wrapper .form-box.register {
     top: -0%;
     position: absolute;
     transition: none;
     transform: translateX(400px);
-}
-
-.wrapper.active .form-box.register {
+  }
+  
+  .wrapper.active .form-box.register {
     transition: transform .18s ease;
     transform: translateX(0);
- }
-
- .wrapper.active-popup {
+  }
+  
+  .wrapper.active-popup {
     transform: scale(1);
- }
-
-.wrapper .icon-close {
+  }
+  
+  .wrapper .icon-close {
     position: absolute;
     top: 0;
     right: 0;
@@ -260,23 +330,23 @@ table {
     border-bottom-left-radius: 20px;
     cursor: pointer;
     z-index: 1;
-}
-
-.form-box h2 {
+  }
+  
+  .form-box h2 {
     font-size: 2em;
     color: goldenrod;
     text-align: center;
-}
-
-.input-box {
+  }
+  
+  .input-box {
     position: relative;
     width: 100%;
     height: 50px;
     border-bottom: 2px solid goldenrod;
     margin: 30px 0;
-}
-
-.input-box label {
+  }
+  
+  .input-box label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -286,14 +356,14 @@ table {
     font-weight: 500;
     pointer-events: none;
     transition: .5s;
-}
-
-.input-box input:focus~label,
-.input-box input:valid~label {
+  }
+  
+  .input-box input:focus~label,
+  .input-box input:valid~label {
     top: -5px;
-}
-
-.input-box input {
+  }
+  
+  .input-box input {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -303,40 +373,40 @@ table {
     color: goldenrod;
     font-weight: 600;
     padding: 0 35px 0 5px;
-}
-
-.input-box .icon {
+  }
+  
+  .input-box .icon {
     position: absolute;
     right: 8px;
     font-size: 1.2em;
     color: goldenrod;
     line-height: 57px;
-}
-
-.remember-forgot {
+  }
+  
+  .remember-forgot {
     font-size: .9em;
     color: #801504;
     font-weight: 500;
     margin: -15px 0 15px;
     display: flex;
     justify-content: space-between;
-}
-
-.remember-forgot label input {
+  }
+  
+  .remember-forgot label input {
     accent-color: goldenrod;
     margin-right: 3px;
-}
-
-.remember-forgot a {
+  }
+  
+  .remember-forgot a {
     color: goldenrod;
     text-decoration: none;
-}
-
-.remember-forgot a:hover {
+  }
+  
+  .remember-forgot a:hover {
     text-decoration: underline;
-}
-
-.btn {
+  }
+  
+  .btn {
     width: 100%;
     height: 45px;
     background: #801504;
@@ -347,27 +417,52 @@ table {
     font-size: 1em;
     color: goldenrod;
     font-weight: 500;
-}
-
-.login-register {
+  }
+  
+  .login-register {
     font-size: .9em;
     color: #801504;
     text-align: center;
     font-weight: 500;
     margin: 25px 0 10px;
-}
-
-.login-register p a {
+  }
+  
+  .login-register p a {
     color: goldenrod;
     text-decoration: none;
     font-weight: 600;
-}
-
-.login-register p a:hover {
+  }
+  
+  .login-register p a:hover {
     text-decoration: underline;
-}
+  }
 
-.menu-div
+  .stat-head
+  {
+    color: goldenrod;
+    margin: 0;
+    height: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  .stat-first
+  {
+    color: goldenrod;
+    padding-top: 10vh;
+    margin: 0;
+    height: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  .stat-text
+  {
+    color: goldenrod;
+    margin: 0;
+    height: 5vh;
+    padding-bottom: 5vh;;
+  }
+
+  .menu-div
 {
   display: none;
 }
@@ -410,90 +505,91 @@ table {
 
 .menu
 {
-  position: relative;
   background-color: #801504;
   color: goldenrod;
   border-color: goldenrod;
   border-radius: 100%;
+  text-align: center;
   font-size: 18px;
   width: 35px;
   height: 35px;
-  text-align: center;
-}
-
-.navigation .btnProfile {
-  width: 130px;
-  height: 50px;
-  background: transparent;
-  border: 2px solid goldenrod;
-  outline: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.1em;
-  color: goldenrod;
-  font-weight: 500;
-  transition: .5s;
-}
-
-.navigation .btnProfile:hover {
-  background: goldenrod;
-  color: #801504;
-}
-
-.last
-{
-    padding-bottom: 10vh;
 }
 
 
-@media only screen and (max-width: 769px)
-{ 
-  #description
+  @media only screen and (max-width: 769px)
+  {
+   .mailimage
+   {
+      width: 10%;
+      height: 30%;
+   }
+  
+   .mailtext
+   {
+      height: 5%;
+   }
+   .wrapper
+   {
+      left: 0%;
+      width: 320px;
+   }
+  
+  .menu-div
+  {
+    display: block;
+    padding-top: 5%;
+    padding-right: 5%;
+    text-align: right;
+    margin-bottom: 5vh;
+  }
+  
+  .img-header
+  {
+      padding-left: 5%;
+      padding-top: 5%;
+      margin-bottom: 3vh;
+  }
+  
+  .navigation
+  {
+      display: none;
+  }
+  
+  .navigation a 
+  {
+    display: none;
+  };
+  
+  .navigation .btnLogin-popup
   {
     display: none;
   }
-
-  #user_id
+  
+  .classbox
   {
-    display: none;
+      width: 100%;
+      height: 125%;
+      align-items: center;
+      text-align: center;
   }
 
-.mailtext
-{
-  height: 5%;
-}
-.wrapper
-{
-  left: 0%;
-  width: 320px;
+  .footer
+  {
+    height: 10vh;
+    top: 100vh;
+  }
+
+  .stat-first
+  {
+    padding-top: 20vh;
+  }
 }
 
-.menu-div
+@media only screen and (min-width: 426px) and (max-width: 769px)
 {
-display: block;
-text-align: right;
-}
-
-.img-header
-{
-  padding-left: 5%;
-  padding-top: 5%;
-  height: 10vh;
-  width: 15vh;
-}
-
-.navigation
-{
-  display: none;
-}
-
-.navigation a 
-{
-display: none;
-};
-
-.navigation .btnLogin-popup
-{
-display: none;
-}
+  .mailimage
+  {
+     width: 5%;
+     height: 30%;
+  }
 }

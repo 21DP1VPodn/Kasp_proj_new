@@ -1,31 +1,28 @@
-<!DOCTYPE html>
 <?php 
 session_start();
-
-include("connection.php");
-include("functions.php");
+include('connection.php');
+include('functions.php');
 ?>
 
+<!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
-  <link href="http://localhost/login/Kasp_proj_new/styles/style-choice.css" rel="stylesheet" type="text/css" />
+  <link href="http://localhost/login/Kasp_proj_new/styles/stats.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
-  <header class = "header"> 
+<header class = "header"> 
     <a class = "image"> 
     <img src = "http://localhost/login/Kasp_proj_new/images/logo.png" class = "img-header">
     </a>
     <?php if(isset($_SESSION['user_id']) == false) : ?>
     <nav class = "navigation">
-      <a href = "choicepage.html", class = "text_header">Home</a>
-      <a href = "statistics.php", class = "text_header">Statistics</a>
-      <a>
+      <a href = "choicepage.html", class = "text_header" id = 'underline-nl'>Home</a>
+      <a href = "statistics.php", class = "text_header" id = 'underline-nl'>Statistics</a>
       <button class = "btnLogin-popup">login</button>
-      </a>
     </nav>
     <?php else: ?>
 
@@ -44,11 +41,11 @@ include("functions.php");
       }
       ?>
       <nav class = "navigation">
-      <a href = "choicepage.php", class = "text_header">Home</a>
-      <a href = "statistics.php", class = "text_header">Statistics</a>
+      <a href = "choicepage.php", class = "text_header" id = 'underline'>Home</a>
+      <a href = "statistics.php", class = "text_header" id = 'underline'>Statistics</a>
       <!--Admin menu-->
       <?php if($user_data['admin?'] == 1): ?>
-        <a href = "admin.php?type=basic", class = "text_header">Admin</a>
+        <a href = "admin.php?type=basic", class = "text_header" id = 'underline'>Admin</a>
       <?php endif; ?>
       <a href = "profile.php">
       <button class = "btnProfile">Profile</button>
@@ -94,7 +91,6 @@ include("functions.php");
     </l>
       </ul>
   </header>
-
   <div class="wrapper">
     <span class = "icon-close">
       <ion-icon name="close"></ion-icon>
@@ -168,62 +164,75 @@ include("functions.php");
       </form>
     </div>
   </div>
-  <a id="container1", style="pointer-events: auto;", href = "subs.php">
-  <div class = "container", id = "container",style = "pointer-events: auto;">
-  <button class = "button-classes">
-    <p class = "text">subclasses</p>
-    <p class = "text-hidden"> <br>choose your role in this world</p>
-  </button>
-  </div>
-  </a>
-  <a id="container2", style="pointer-events: auto;", href = "Races.php">
-  <div class = "container">
-  <button class = "button-races">
-    <p class = "text">races</p>
-    <p class = "text-hidden"> <br>Choose your nationality in this world</p>
-  </button>
-  </div>
-  </a>
-  <a id="container3", style="pointer-events: auto;", href = "Feats.php">
-  <div class = "container">
-  <button class = "button-feats">
-    <p class = "text">feats</p>
-    <p class = "text-hidden"> <br>for all your awesome combos</p>
-  </button>
-  </div>
-  </a>
-  <a id="container4", style="pointer-events: auto;", href = "Backstories.php">
-  <div class = "container">
-  <button class = "button-backgrounds">
-    <p class = "text">backstories</p>
-    <p class = "text-hidden"> <br>who were you before the adventure?</p>
-  </button>
-  </div>
-  </a>
-  <a id="container5", style="pointer-events: auto;", href = "dice.php">
-  <div class = "container">
-  <button class = "button-dice">
-    <p class = "text"> dice</p>
-    <p class = "text-hidden"> <br>roll the dice and test your luck</p>
-  </button>
-  </div>
-  </a>
-  <a id="container6", style="pointer-events: auto;", href = "https://dnd.wizards.com/products?category=tabletop-rpg">
-  <div class = "container">
-<button class = "button-books">
-  <p class = "text">official books </p> 
-  <p class = "text-hidden"> <br>buy official books for more content</p>
-</button>
-</div>
-</a>
-<footer class = "footer">
+
+  <h1 class = 'stat-first'> Subclasses</h1>
+  <?php 
+  $query = 'select * from subclases where Views = (select MAX(Views) from subclases)';
+  $result = mysqli_query($con, $query);
+  if ($result && mysqli_num_rows($result))
+  {
+  $data = mysqli_fetch_assoc($result);
+  }
+  else
+  {
+    echo('The result is empty');
+    die;
+  }
+  ?>
+  <p class = 'stat-text'>Most popular subclass - <a href = 'Subclass_template.php?page=<?php echo($data['ID'])?>' class = 'stat-text'><?php echo($data['Main Title'])?></a></p>
+  <h1 class = 'stat-head'>Races</h1>
+  <?php 
+  $query = 'select * from races where Views = (select MAX(Views) from races)';
+  $result = mysqli_query($con, $query);
+  if ($result && mysqli_num_rows($result))
+  {
+  $data = mysqli_fetch_assoc($result);
+  }
+  else
+  {
+    echo('The result is empty');
+    die;
+  }
+  ?>
+  <p class = 'stat-text'>Most popular race - <a href = 'Race_template.php?page=<?php echo($data['ID'])?>' class = 'stat-text'><?php echo($data['Title'])?></a></p>
+  <h1 class = 'stat-head'>Feats</h1>
+  <?php 
+  $query = 'select * from feats where Views = (select MAX(Views) from feats)';
+  $result = mysqli_query($con, $query);
+  if ($result && mysqli_num_rows($result))
+  {
+  $data = mysqli_fetch_assoc($result);
+  }
+  else
+  {
+    echo('The result is empty');
+    die;
+  }
+  ?>
+  <p class = 'stat-text'>Most popular feat - <a href = 'Feat_template.php?page=<?php echo($data['ID'])?>' class = 'stat-text'><?php echo($data['Title'])?></a></p>
+  <h1 class = 'stat-head'>Backstory</h1>
+  <?php 
+  $query = 'select * from backstories where Views = (select MAX(Views) from backstories)';
+  $result = mysqli_query($con, $query);
+  if ($result && mysqli_num_rows($result))
+  {
+  $data = mysqli_fetch_assoc($result);
+  }
+  else
+  {
+    echo('The result is empty');
+    die;
+  }
+  ?>
+  <p class = 'stat-text'>Most popular backstory - <a href = 'Backstory_template.php?page=<?php echo($data['ID'])?>' class = 'stat-text'><?php echo($data['Title'])?></a></p>
+  <footer class = "footer">
   <img src = "http://localhost/login/Kasp_proj_new/images/mail.png" class = "mailimage">
   <p class = "mailtext">VladlensPodnebess@gmail.lv</p>
 </footer>
 
+
 <script src = "http://localhost/login/Kasp_proj_new/functions/dropdown-controller.js"></script>
-<script src = "http://localhost/login/Kasp_proj_new/functions/login-register.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-</html>
+<script src = "http://localhost/login/Kasp_proj_new/functions/login-register.js"></script>
+<html>

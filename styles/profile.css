@@ -99,3 +99,29 @@ body
     padding-bottom: 40px;
 }
 
+.nickname
+{
+    font-size: 40px;
+    color: goldenrod;
+    display: none;
+}
+
+@media only screen and (max-width: 1025px)
+{
+    .sidebar
+    {
+        display: none;
+    }
+
+    .nickname
+    {
+        display: block;
+    }
+
+    .content
+    {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+

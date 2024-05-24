@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include('functions.php');
 include('connection.php');
+include('functions.php');
 
 $user_data = check_login($con);
 ?>
@@ -13,7 +13,7 @@ $user_data = check_login($con);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>replit</title>
-    <link href="profile.css" rel="stylesheet" type="text/css" />
+    <link href="http://localhost/login/Kasp_proj_new/styles/profile.css" rel="stylesheet" type="text/css" />
 </head>
 
 <div class = 'container'>
@@ -30,14 +30,14 @@ $user_data = check_login($con);
             <div class = 'col-md-4 mt-1'>
                 <div class = 'card-side text-center sidebar'>
                     <div class = 'card body'>
-                        <img src = 'logo.png' class = 'img' width = '150'>
+                        <img src = 'http://localhost/login/Kasp_proj_new/images/logo.png' class = 'img' width = '150'>
                         <div class = 'mt-3'>
                             <h3 class = 'username'><?php echo $user_data['username'];?></h3>
                             <a href = 'subs.html'>Subclasses</a>
                             <a href = 'Races.html'>Races</a>
                             <a href = 'Feats.html'>Feats</a>
                             <a href = 'Backstories.html'>Backstories</a>
-                            <a href = 'dice.html'>Dice</a>
+                            <a href = 'dice.php'>Dice</a>
                         </div>
                     </div>
                 </div>
@@ -47,6 +47,7 @@ $user_data = check_login($con);
         <!--Contnet-->
         <div class = 'col-md-8 mt-1'>
             <div class = 'card mb-3 content'>
+                <h1 class = 'nickname'><?php echo($user_data['username'])?></h1>
                 <h1 class = 'm-3'>About</h1>
                 <div class = 'card body'>
 
