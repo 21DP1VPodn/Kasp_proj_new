@@ -71,6 +71,7 @@ function show()
     if(document.getElementsByClassName('buttontext') != null)
     {
         var elements = document.getElementsByClassName('buttontext');
+        
         for(let i = 0; i < elements.length; i++)
         {
             elements[i].style.display = 'none';

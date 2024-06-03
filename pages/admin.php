@@ -14,6 +14,21 @@ else
     header('Location: choicepage.php');
     die;
 }
+
+if (isset($_SESSION['user_id']))
+{
+  $user_data = check_login($con);
+  if ($user_data['admin?'] == 0)
+  {
+    header('Location: choicepage.php');
+    die;
+  }
+}
+else
+{
+  header('Location: choicepage.php');
+  die;
+}
 ?>
 
 <html>

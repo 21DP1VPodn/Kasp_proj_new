@@ -164,32 +164,118 @@ include("functions.php");
         </form>
       </div>
     </div>
-    <a href = "Subclass_template.php?page=1">
-    <div class = "container-first">
-    <button class = "classbox">
-      <p class = "buttontext">monk: way of fast kicks</p>
+    <div class = 'filtering'>
+  <input class="searchbar" placeholder="search" type="search">
+    <div class="filters">
+    <button class="filter" onclick="toggleFilterMenu()">
+      <span>
+        <ion-icon name="filter"></ion-icon>
+      </span>
     </button>
-    </div>
-    </a>
-    <a href = "Subclass_template.php?page=2">
-      <div class = "container">
-      <button class = "classbox">
-        <p class = "buttontext">wizard: school of mind infestation</p>
-      </button>
+    <div class="filter-menu" id="filter-menu">
+      <p class="filter-title">Sorts</p>
+      <div>
+        <input type="checkbox" id="sort-asc" name="sort" value="asc">
+        <label for="sort-asc">Alphabetical Order</label>
       </div>
-      </a>
-      <a href = "Subclass_template.php?page=3">
-        <div class = "container">
-        <button class = "classbox">
-          <p class = "buttontext" id = 'buttontext'>druid: circle of the trees</p>
+      <div>
+        <input type="checkbox" id="sort-desc" name="sort" value="desc">
+        <label for="sort-desc">Counter-Alphabetical Order</label>
+      </div>
+      <p class="filter-title">Filters</p>
+      <div>
+        <input type="checkbox" id="filter-bard" name="class-filter" value="bard">
+        <label for="filter-bard">Bard</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-barbarian" name="class-filter" value="barbarian">
+        <label for="filter-barbarian">Barbarian</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-fighter" name="class-filter" value="fighter">
+        <label for="filter-fighter">Fighter</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-wizard" name="class-filter" value="wizard">
+        <label for="filter-wizard">Wizard</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-druid" name="class-filter" value="druid">
+        <label for="filter-druid">Druid</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-cleric" name="class-filter" value="cleric">
+        <label for="filter-cleric">Cleric</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-artificer" name="class-filter" value="artificer">
+        <label for="filter-artificer">Artificer</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-warlock" name="class-filter" value="warlock">
+        <label for="filter-warlock">Warlock</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-monk" name="class-filter" value="monk">
+        <label for="filter-monk">Monk</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-paladin" name="class-filter" value="paladin">
+        <label for="filter-paladin">Paladin</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-rogue" name="class-filter" value="rogue">
+        <label for="filter-rogue">Rogue</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-ranger" name="class-filter" value="ranger">
+        <label for="filter-ranger">Ranger</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-sorcerer" name="class-filter" value="sorcerer">
+        <label for="filter-sorcerer">Sorcerer</label>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="subs">
+    <div class="box">
+      <div class="container">
+        <a href = "Subclass_template.php?page=1" class = 'classbox-link'>
+        <button class="classbox">
+          <p class="buttontext">monk: way of fast kicks</p>
         </button>
-        </div>
         </a>
+      </div>
+      </div>
+    <div class="box">
+      <div class="container">
+        <a href="Subclass_template.php?page=2" class = 'classbox-link'>
+        <button class="classbox">
+          <p class="buttontext">wizard: school of mind infestation</p>
+        </button>
+        </a>
+      </div>
+      </div>
+    <div class="box">
+      <div class="container">
+        <a href="Subclass_template.php?page=3" class = 'classbox-link'>
+        <button class="classbox">
+          <p class="buttontext">druid: circle of the trees</p>
+        </button>
+        </a>
+      </div>
+      </div>
+  </div>
+</div>
+        </div>
     <footer class = "footer">
         <img src = "http://localhost/login/Kasp_proj_new/images/mail.png" class = "mailimage">
         <p class = "mailtext">VladlensPodnebess@gmail.lv</p>
     </footer>
 
+<script src = "http://localhost/login/Kasp_proj_new/functions/filters.js"></script>
+<script src = "http://localhost/login/Kasp_proj_new/functions/Search.js"></script>
 <script src = "http://localhost/login/Kasp_proj_new/functions/dropdown-controller.js"></script>
 <script src = "http://localhost/login/Kasp_proj_new/functions/login-register.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

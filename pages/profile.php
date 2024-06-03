@@ -4,6 +4,12 @@ session_start();
 include('connection.php');
 include('functions.php');
 
+if (isset($_SESSION['user_id']) == false)
+{
+    header('Location: choicepage.php');
+    die;
+}
+
 $user_data = check_login($con);
 ?>
 
@@ -23,6 +29,7 @@ $user_data = check_login($con);
         <div class = 'topbar'>
             <a href = 'choicepage.php'>Home</a>
             <a href = 'logout.php'>Logout</a>
+            <a href = 'delete.php' >Delete Acc.</ahref>
         </div>
 
         <!--Sidebar-->
