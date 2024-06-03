@@ -10,3 +10,15 @@
 ### 8. paskatīties vai visi parametri failā connections.php atbilst jūsu datu bāzes pārvaldes sistēmai, pēc nepieciešamības izmainīt $dbhost, $dbuser un $dbpassword 
 ### 9. palaist xampp
 ### 10. aiziet brauzerī un atvert http://localhost/login/Kasp_proj_new/pages/index.php
+
+# Sistēmas izstrādes rīki
+
+### 1. Visual Studio Code
+### 2. MySQL
+### 3. Laragon
+### 4. xampp
+### 5. HTML
+### 6. CSS
+### 7. JavaScript
+### 8. PHP
+### 9. Chrome DevTools
