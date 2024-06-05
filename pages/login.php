@@ -30,20 +30,20 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                     die;
                 }
                 else{
-                    echo "wrong username or password! error code: 1";   
+                    echo "wrong password!";   
                 }
             }
             else
             {
-                echo "wrong username or password! error code: 2"; 
+                echo "wrong username!"; 
             }
         }
         else{
-        echo "wrong username or password! error code: 3";
+        echo "sorry, something went wrong with our database, try again!";
         }  
    }
    else
    {
-        echo "wrong username or password! erroe code: 4";
+        echo "the data you provided is empty, please try again!";
    }
 }
